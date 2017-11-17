@@ -15,6 +15,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _C1IF `Vb ~T0 @X0 0 e@109 ]
 "3660
 [v _C1OUT `Vb ~T0 @X0 0 e@2110 ]
+"3574
+[v _ADIF `Vb ~T0 @X0 0 e@102 ]
+"1762
+[s S65 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S65 . CCP2IE . ULPWUIE BCLIE EEIE C1IE C2IE OSFIE ]
+"1761
+[u S64 `S65 1 ]
+[n S64 . . ]
+"1773
+[v _PIE2bits `VS64 ~T0 @X0 0 e@141 ]
 [p mainexit ]
 "164
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
@@ -42,6 +52,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 "4 main.c
 [v _Comparator_Init `(v ~T0 @X0 0 ef ]
+"5
+[v _ADC_Init `(v ~T0 @X0 0 ef ]
 "457 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f887.h
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 "1756
@@ -50,6 +62,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _VRCON `Vuc ~T0 @X0 0 e@151 ]
 "3062
 [v _CM1CON0 `Vuc ~T0 @X0 0 e@263 ]
+"1700
+[v _PIE1 `Vuc ~T0 @X0 0 e@140 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1753,39 +1767,80 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 156 ]
 }
 [; ;main.c: 4: void Comparator_Init();
-[v $root$_ISR `(v ~T0 @X0 0 e ]
-[v F1667 `(v ~T0 @X0 1 tf ]
+[; ;main.c: 5: void ADC_Init();
 "6 main.c
-[v _ISR `IF1667 ~T0 @X0 1 e ]
+[v _i `i ~T0 @X0 1 e ]
+[i _i
+-U -> 1 `i
+]
+[; ;main.c: 6: int i = -1;
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+[v F1669 `(v ~T0 @X0 1 tf ]
+"7
+[v _ISR `IF1669 ~T0 @X0 1 e ]
 {
-[; ;main.c: 6: void interrupt ISR(){
+[; ;main.c: 7: void interrupt ISR(){
 [e :U _ISR ]
 [f ]
-[; ;main.c: 7: if(C1IF){
-"7
+[; ;main.c: 8: if(C1IF){
+"8
 [e $ ! _C1IF 161  ]
 {
-[; ;main.c: 8: C1IF = 0;
-"8
-[e = _C1IF -> -> 0 `i `b ]
-[; ;main.c: 9: PORTD |= (C1OUT << 6);
+[; ;main.c: 9: C1IF = 0;
 "9
-[e =| _PORTD -> << -> _C1OUT `i -> 6 `i `uc ]
+[e = _C1IF -> -> 0 `i `b ]
+[; ;main.c: 10: PORTD = (C1OUT << 6);
 "10
+[e = _PORTD -> << -> _C1OUT `i -> 6 `i `uc ]
+[; ;main.c: 11: ADCON0 = 0b00000011;
+"11
+[e = _ADCON0 -> -> 3 `i `uc ]
+[; ;main.c: 12: i++;
+"12
+[e ++ _i -> 1 `i ]
+"13
 }
 [e :U 161 ]
-[; ;main.c: 10: }
-[; ;main.c: 12: }
-"12
+[; ;main.c: 13: }
+[; ;main.c: 15: if(ADIF)
+"15
+[e $ ! _ADIF 162  ]
+[; ;main.c: 16: {
+"16
+{
+[; ;main.c: 17: ADIF = 0;
+"17
+[e = _ADIF -> -> 0 `i `b ]
+[; ;main.c: 18: if(i) {
+"18
+[e $ ! != _i -> 0 `i 163  ]
+{
+[; ;main.c: 19: PORTD = ADRESH ;
+"19
+[e = _PORTD _ADRESH ]
+[; ;main.c: 20: PIE2bits.C1IE = 0;}
+"20
+[e = . . _PIE2bits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 163 ]
+[; ;main.c: 22: ADCON0 = 0b00000010;
+"22
+[e = _ADCON0 -> -> 2 `i `uc ]
+"24
+}
+[e :U 162 ]
+[; ;main.c: 24: }
+[; ;main.c: 26: }
+"26
 [e :UE 160 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"13
+"27
 [v _main `(i ~T0 @X0 1 ef ]
-"14
+"28
 {
-[; ;main.c: 13: main ()
-[; ;main.c: 14: {
+[; ;main.c: 27: main ()
+[; ;main.c: 28: {
 [e :U _main ]
 [f ]
 [; ;init.c: 4: PORTA=0; PORTB=0; PORTC=0; PORTD=0; PORTE=0;
@@ -1833,43 +1888,68 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;init.c: 28: _delay((unsigned long)((300)*(4000000/4000.0)));
 "28
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 20: Comparator_Init();
-"20 main.c
+[; ;main.c: 34: Comparator_Init();
+"34 main.c
 [e ( _Comparator_Init ..  ]
-[; ;main.c: 24: while (1) {
-"24
-[e :U 164 ]
+[; ;main.c: 35: ADC_Init();
+"35
+[e ( _ADC_Init ..  ]
+[; ;main.c: 39: while (1) {
+"39
+[e :U 166 ]
 {
-"26
+"41
 }
-[e :U 163 ]
-"24
-[e $U 164  ]
 [e :U 165 ]
-[; ;main.c: 26: }
-[; ;main.c: 29: }
-"29
-[e :UE 162 ]
+"39
+[e $U 166  ]
+[e :U 167 ]
+[; ;main.c: 41: }
+[; ;main.c: 44: }
+"44
+[e :UE 164 ]
 }
-"38
+"53
 [v _Comparator_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 38: void Comparator_Init(){
+[; ;main.c: 53: void Comparator_Init(){
 [e :U _Comparator_Init ]
 [f ]
-[; ;main.c: 39: INTCON = 0b11000000;
-"39
+[; ;main.c: 54: INTCON = 0b11000000;
+"54
 [e = _INTCON -> -> 192 `i `uc ]
-[; ;main.c: 40: PIE2 = 0b00100000;
-"40
+[; ;main.c: 55: PIE2 = 0b00100000;
+"55
 [e = _PIE2 -> -> 32 `i `uc ]
-[; ;main.c: 41: VRCON = 0b10100010;
-"41
+[; ;main.c: 56: VRCON = 0b10100010;
+"56
 [e = _VRCON -> -> 162 `i `uc ]
-[; ;main.c: 42: CM1CON0 = 0b11010100;
-"42
-[e = _CM1CON0 -> -> 212 `i `uc ]
-[; ;main.c: 46: }
-"46
-[e :UE 166 ]
+[; ;main.c: 57: CM1CON0 = 0b10000100;
+"57
+[e = _CM1CON0 -> -> 132 `i `uc ]
+[; ;main.c: 61: }
+"61
+[e :UE 168 ]
+}
+"63
+[v _ADC_Init `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 63: void ADC_Init(){
+[e :U _ADC_Init ]
+[f ]
+[; ;main.c: 64: ADCON1 = 0b00000000;
+"64
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 65: INTCON = 0b11000000;
+"65
+[e = _INTCON -> -> 192 `i `uc ]
+[; ;main.c: 66: PIE1 = 0b01000000;
+"66
+[e = _PIE1 -> -> 64 `i `uc ]
+[; ;main.c: 67: ADCON0 = 0b01000000;
+"67
+[e = _ADCON0 -> -> 64 `i `uc ]
+[; ;main.c: 69: }
+"69
+[e :UE 169 ]
 }

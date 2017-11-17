@@ -9,7 +9,6 @@ void interrupt ISR(void){
        {
            ADIF = 0;
         LEDs = ADRESH;
-        ADCON0 = 0b00000001;
         ADCON0bits.GO = 1;
     
 
