@@ -40,8 +40,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit2PlatformTool</platformTool>
-        <languageToolchain></languageToolchain>
-        <languageToolchainVersion></languageToolchainVersion>
+        <languageToolchain>XC8</languageToolchain>
+        <languageToolchainVersion>1.44</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -147,7 +147,7 @@
       <PICkit2PlatformTool>
         <property key="pk2settings.3state" value="false"/>
         <property key="pk2settings.preserveee" value="false"/>
-        <property key="pk2settings.setvddvoltage" value="5.00"/>
+        <property key="pk2settings.setvddvoltage" value=""/>
         <property key="pk2settings.userpgmexec" value="true"/>
         <property key="pk2settings.usetargetpower" value="false"/>
       </PICkit2PlatformTool>

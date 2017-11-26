@@ -15,11 +15,7 @@
 
 ; Place your SUBROUTINE(S) (if any) here ...  
 ;{ 
-ISR	
-	banksel INTCON
-	btfsc  INTCON,INTF  ;check whether external int occured
-	bsf	LEDs,LD0
-	retfie	; replace retfie with your ISR if necessary
+ISR	retfie	; replace retfie with your ISR if necessary
 ;} end of your subroutines
 
 
@@ -30,13 +26,7 @@ Main	nop
 ; Place your INITIALISATION code (if any) here ...   
 ;{ ***		***************************************************
 ; e.g.,		movwf	Ctr1 ; etc
-	
-	banksel INTCON
-	movlw	B'10010000'    ; bit7 Enable GLobal Interrupt, bit4 Enable External Interrupt	
-	movwf	INTCON
-	banksel OPTION_REG
-	bcf	OPTION_REG,INTEDG  ;clear INTEDG to enable falling edge of INT pin
-  
+
 
 ;} 
 ; end of your initialisation
