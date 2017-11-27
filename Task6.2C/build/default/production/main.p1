@@ -1830,19 +1830,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 34: PR2 = 0x13;
 "34
 [e = _PR2 -> -> 19 `i `uc ]
-[; ;main.c: 35: CCP1CON = 0b01101100;
+[; ;main.c: 35: CCP1CON = 0b01111100;
 "35
-[e = _CCP1CON -> -> 108 `i `uc ]
+[e = _CCP1CON -> -> 124 `i `uc ]
 [; ;main.c: 36: CCPR1L = 0b00000101;
 "36
 [e = _CCPR1L -> -> 5 `i `uc ]
-[; ;main.c: 38: T2CON = 0b00000100;
-"38
+[; ;main.c: 37: T2CON = 0b00000100;
+"37
 [e = _T2CON -> -> 4 `i `uc ]
-[; ;main.c: 39: PORTD |= 0b00001111;
-"39
-[e =| _PORTD -> -> 15 `i `uc ]
-[; ;main.c: 40: }
+[; ;main.c: 40: PORTD |= 0b00001111;
 "40
+[e =| _PORTD -> -> 15 `i `uc ]
+[; ;main.c: 41: }
+"41
 [e :UE 164 ]
 }

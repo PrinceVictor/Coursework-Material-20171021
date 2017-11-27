@@ -13,6 +13,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "3574
 [v _ADIF `Vb ~T0 @X0 0 e@102 ]
+"2968
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 "1249
 [s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
 [n S45 . ADON GO_nDONE CHS ADCS ]
@@ -1781,11 +1783,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 10: ADIF = 0;
 "10
 [e = _ADIF -> -> 0 `i `b ]
-[; ;main.c: 11: PORTD = ADRESH;
+[; ;main.c: 11: PORTD = (ADRESH << 2 )+ (ADRESL >> 6);
 "11
-[e = _PORTD _ADRESH ]
-[; ;main.c: 12: ADCON0bits.GO = 1;
-"12
+[e = _PORTD -> + << -> _ADRESH `i -> 2 `i >> -> _ADRESL `i -> 6 `i `uc ]
+[; ;main.c: 14: ADCON0bits.GO = 1;
+"14
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "15
 }
@@ -1882,9 +1884,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 46: PIE1 = 0b01000000;
 "46
 [e = _PIE1 -> -> 64 `i `uc ]
-[; ;main.c: 47: ADCON0 = 0b00000011;
+[; ;main.c: 47: ADCON0 = 0b00111111;
 "47
-[e = _ADCON0 -> -> 3 `i `uc ]
+[e = _ADCON0 -> -> 63 `i `uc ]
 [; ;main.c: 49: }
 "49
 [e :UE 166 ]

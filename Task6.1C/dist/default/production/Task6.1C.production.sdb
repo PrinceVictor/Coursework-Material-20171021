@@ -37,13 +37,13 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1243
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S30 . 1 `uc 1 ADON 1 0 :1:0 
+[s S31 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1274
-[s S35 . 1 `uc 1 . 1 0 :1:0 
+[s S36 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -52,14 +52,14 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S44 . 1 `uc 1 . 1 0 :1:0 
+[s S45 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S47 . 1 `uc 1 . 1 0 :1:0 
+[s S48 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S50 . 1 `S30 1 . 1 0 `S35 1 . 1 0 `S44 1 . 1 0 `S47 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES50  1 e 1 @31 ]
+[u S51 . 1 `S31 1 . 1 0 `S36 1 . 1 0 `S45 1 . 1 0 `S48 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES51  1 e 1 @31 ]
 "1344
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
 "1414
@@ -74,6 +74,8 @@
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
 "1700
 [v _PIE1 PIE1 `VEuc  1 e 1 @140 ]
+"2968
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2975
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 "3385

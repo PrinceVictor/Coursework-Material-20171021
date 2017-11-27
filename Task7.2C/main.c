@@ -6,8 +6,8 @@ void PortBint_Init();
 unsigned char Counters =0;
 
 void interrupt ISR(){
-    if(RBIF){
-        RBIF =0;
+    if(RBIF){   // check portB change flag
+        RBIF =0;  // software clear portB change flag
         Counters ++;
     
         while(PORTB == 0);
@@ -39,7 +39,7 @@ main ()
 //		ctr ^= 0b00100001; // inverts RB5 and RB1 only leaving the other bits unchanged 	
 //}
 void PortBint_Init(){
-    INTCON = 0b10001000;
-    IOCB   = 0b00000001;
+    INTCON = 0b10001000;  //bit7 for enable Global Interrupt, bit3 for enable portB change interrupt  
+    IOCB   = 0b00000001;  //enable interrupt on change on portB0
     
 }

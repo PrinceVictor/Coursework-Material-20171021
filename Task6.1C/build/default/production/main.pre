@@ -2186,10 +2186,10 @@ void interrupt ISR(void){
 if(ADIF)
 {
 ADIF = 0;
-PORTD = ADRESH;
+PORTD = (ADRESH << 2 )+ (ADRESL >> 6);
+
+
 ADCON0bits.GO = 1;
-
-
 }
 }
 main ()
@@ -2240,6 +2240,6 @@ void ADC_Init(){
 ADCON1 = 0b00000000;
 INTCON = 0b11000000;
 PIE1 = 0b01000000;
-ADCON0 = 0b00000011;
+ADCON0 = 0b00111111;
 
 }

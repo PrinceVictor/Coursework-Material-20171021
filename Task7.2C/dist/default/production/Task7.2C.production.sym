@@ -140,7 +140,7 @@ config 400E 4011 CONFIG 400E 0
 cstackCOMMON 70 78 COMMON 70 1
 %locals
 dist/default/production\Task7.2C.production.obj
-C:\Users\Victor\AppData\Local\Temp\s9uc.
+C:\Users\Victor\AppData\Local\Temp\sd0.
 248 15 0 CODE 0
 251 15 0 CODE 0
 262 15 0 CODE 0
