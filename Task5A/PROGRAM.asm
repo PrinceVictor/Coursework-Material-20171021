@@ -40,7 +40,7 @@ MLoop	nop
 ; place your superloop code here ...   ;{
 	
 	movfw	Temp
-	skipPre
+skipPre
 	call	Select4
 	movwf	Temp
 ;	Select4 data are stored in the variable Temp

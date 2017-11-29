@@ -1,5 +1,5 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Sun Nov 26 20:44:09 2017
+Linker Map File - Created Tue Nov 28 16:06:10 2017
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,7 +7,7 @@ Linker Map File - Created Sun Nov 26 20:44:09 2017
                     V_RES       code   0x000000    program   0x000004
                    .cinit    romdata   0x000002    program   0x000004
                     V_INT       code   0x000004    program   0x000002
-                    .code       code   0x000005    program   0x000164
+                    .code       code   0x000005    program   0x000178
 .config_2007_BUILD/DEFAULT/PRODUCTION/PROGRAM       code   0x002007    program   0x000002
 .config_2008_BUILD/DEFAULT/PRODUCTION/PROGRAM       code   0x002008    program   0x000002
                       gr1      udata   0x000020       data   0x000009
@@ -18,9 +18,9 @@ Linker Map File - Created Sun Nov 26 20:44:09 2017
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0000b6      
+                            0x000000    0x0000c0      
                             0x002007    0x002008      
-            185 out of 8455 program addresses used, program memory utilization is 2%
+            195 out of 8455 program addresses used, program memory utilization is 2%
 
 
 
@@ -37,10 +37,11 @@ Linker Map File - Created Sun Nov 26 20:44:09 2017
                 Del_100us   0x000005    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                    Del_ms   0x00000c    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                       ISR   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
-                    MLoop   0x0000b5    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
-                     Main   0x000089    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+                    MLoop   0x0000bf    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+                     Main   0x000091    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
                     RADC1   0x000021    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                   ReadADC   0x000020    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
+              STATUS_Save   0x0000b7    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
                      Sel0   0x00003f    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                      Sel1   0x000042    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                      Sel2   0x000047    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
@@ -52,6 +53,7 @@ Linker Map File - Created Sun Nov 26 20:44:09 2017
                   SelMSB1   0x000045    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                   Select4   0x000031    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                   SelectB   0x00005e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
+                   W_Save   0x0000b6    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
                         A   0x000021       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\VAR.inc
                       Bop   0x000022       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\VAR.inc
                    D_Ctr1   0x000023       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_VAR.inc
@@ -92,8 +94,10 @@ Linker Map File - Created Sun Nov 26 20:44:09 2017
                    SelBRd   0x000060    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                     SelL2   0x000065    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\ECH_SUB.INC
                       ISR   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
-                     Main   0x000089    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
-                    MLoop   0x0000b5    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+                     Main   0x000091    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+                   W_Save   0x0000b6    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+              STATUS_Save   0x0000b7    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
+                    MLoop   0x0000bf    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\PROGRAM.asm
                      Temp   0x000020       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\VAR.inc
                         A   0x000021       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\VAR.inc
                       Bop   0x000022       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.1A\VAR.inc

@@ -37,9 +37,7 @@ main ()
 
     //***  your code for the superloop
 	while (1) {
-         i++;
-         if(i >1000) ReadADC();
-         if(i >1001)  i =0;
+        ReadADC();
         if(PORTB & 0b00000001){
             switch(Select4()){
                 case 1:  temp = 0;  break;
@@ -59,13 +57,12 @@ main ()
 }  // end main
 
 void Inter_Init(){
-    INTCON = 0b11010000;
     OPTION_REGbits.INTEDG = 1;
     PIE1   = 0b01000001;
     TMR1H = 0b11110100;
     TMR1L = 0b00100100;
     T1CON = 0b00110001;
-    
+    INTCON = 0b11010000;
 
 }
 //{

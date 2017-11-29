@@ -16,11 +16,21 @@
 ; Place your SUBROUTINE(S) (if any) here ...  
 ;{ 
 ISR	
-	banksel INTCON
-	btfsc  INTCON,INTF  ;check whether external int occured
-	bsf	LEDs,LD0
+	movwf     W_Save              ; Save context
+	swapf     STATUS,W
+	movwf     STATUS_Save
+
+	banksel	   INTCON
+	btfsc	   INTCON,INTF  ;check whether external int occured
+	bsf	   LEDs,LD0
+	bcf	   INTCON,INTF
+
+	movf      STATUS_Save,w       ; Restore context
+	movwf     STATUS
+	swapf     W_Save,f            ; swapf doesn't affect Status bits, but MOVF would
+	swapf     W_Save,w
 	retfie	; replace retfie with your ISR if necessary
-;} end of your subroutines
+
 
 
 ; Provided code - do not edit  
@@ -28,15 +38,16 @@ Main	nop
 #include  ECH_INIT.inc
 
 ; Place your INITIALISATION code (if any) here ...   
+W_Save	    RES 1
+STATUS_Save RES 1
 ;{ ***		***************************************************
 ; e.g.,		movwf	Ctr1 ; etc
 	
-	banksel INTCON
-	movlw	B'10010000'    ; bit7 Enable GLobal Interrupt, bit4 Enable External Interrupt	
-	movwf	INTCON
-	banksel OPTION_REG
-	bcf	OPTION_REG,INTEDG  ;clear INTEDG to enable falling edge of INT pin
-  
+	banksel    OPTION_REG
+	bcf	   OPTION_REG,INTEDG  ;clear INTEDG to enable falling edge of INT pin
+	banksel    INTCON
+	movlw	   B'10010000'    ; bit7 Enable GLobal Interrupt, bit4 Enable External Interrupt	
+	movwf	   INTCON
 
 ;} 
 ; end of your initialisation

@@ -40,8 +40,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit2PlatformTool</platformTool>
-        <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.44</languageToolchainVersion>
+        <languageToolchain>MPASMWIN</languageToolchain>
+        <languageToolchainVersion>5.75</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -151,6 +151,13 @@
         <property key="stack-size-main" value="auto"/>
         <property key="stack-type" value="compiled"/>
       </XC8-config-global>
+      <mpasmsuite>
+        <property key="absolute-mode" value="false"/>
+        <property key="eeprom-width" value="8"/>
+        <property key="extended-mode" value="false"/>
+        <property key="extended-mode-mpasm" value="false"/>
+        <property key="extended-mode-mplink" value="false"/>
+      </mpasmsuite>
     </conf>
   </confs>
 </configurationDescriptor>

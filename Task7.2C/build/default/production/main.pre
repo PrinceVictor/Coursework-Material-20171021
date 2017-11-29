@@ -2181,14 +2181,15 @@ return result;
 # 4 "main.c"
 void PortBint_Init();
 
-unsigned char Counters =0;
+unsigned char Counters =0,data;
 
 void interrupt ISR(){
 if(RBIF){
+data = PORTB;
 RBIF =0;
-Counters ++;
+Counters = Counters +1;
 
-while(PORTB == 0);
+
 }
 }
 main ()
@@ -2221,7 +2222,7 @@ _delay((unsigned long)((300)*(4000000/4000.0)));
 PORTD = 0;
 _delay((unsigned long)((300)*(4000000/4000.0)));
 
-# 23 "main.c"
+# 24 "main.c"
 PortBint_Init();
 
 
@@ -2233,9 +2234,9 @@ PORTD = Counters;
 
 }
 
-# 41
+# 42
 void PortBint_Init(){
-INTCON = 0b10001000;
 IOCB = 0b00000001;
+INTCON = 0b10001000;
 
 }

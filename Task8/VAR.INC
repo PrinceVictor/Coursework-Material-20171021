@@ -5,7 +5,13 @@
 ; examples:
 ;Ctr1	RES	1	; your vaiable, e.g., for counter 1
 ;Ctr2	RES	1
-Temp	Res	1	; this is used by the examples
+Temp		Res	1	; this is used by the examples
 A		Res	1
 Bop		Res	1
-
+W_Save		RES	1
+STATUS_Save	RES	1
+Speed_High	RES	1
+Speed_Middle	RES	1
+Speed_Slow	RES	1
+Speed_Very_Slow	RES	1
+LFSR		RES	1

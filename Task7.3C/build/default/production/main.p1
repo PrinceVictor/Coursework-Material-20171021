@@ -46,9 +46,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 "4 main.c
 [v _Inter_Init `(v ~T0 @X0 0 ef ]
-"457 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f887.h
-[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
-"1350
+"1350 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f887.h
 [s S50 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S50 . PS PSA T0SE T0CS INTEDG nRBPU ]
 "1358
@@ -67,6 +65,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
 "669
 [v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"457
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1900,115 +1900,105 @@ Version 3.2 HI-TECH Software Intermediate Code
 "39
 [e :U 166 ]
 {
-[; ;main.c: 40: i++;
+[; ;main.c: 40: ReadADC();
 "40
-[e ++ _i -> -> 1 `i `ui ]
-[; ;main.c: 41: if(i >1000) ReadADC();
-"41
-[e $ ! > _i -> -> 1000 `i `ui 168  ]
 [e ( _ReadADC ..  ]
-[e :U 168 ]
-[; ;main.c: 42: if(i >1001) i =0;
+[; ;main.c: 41: if(PORTB & 0b00000001){
+"41
+[e $ ! != & -> _PORTB `i -> 1 `i -> 0 `i 168  ]
+{
+[; ;main.c: 42: switch(Select4()){
 "42
-[e $ ! > _i -> -> 1001 `i `ui 169  ]
-[e = _i -> -> 0 `i `ui ]
-[e :U 169 ]
-[; ;main.c: 43: if(PORTB & 0b00000001){
+[e $U 170  ]
+{
+[; ;main.c: 43: case 1: temp = 0; break;
 "43
-[e $ ! != & -> _PORTB `i -> 1 `i -> 0 `i 170  ]
-{
-[; ;main.c: 44: switch(Select4()){
-"44
-[e $U 172  ]
-{
-[; ;main.c: 45: case 1: temp = 0; break;
-"45
-[e :U 173 ]
+[e :U 171 ]
 [e = _temp -> -> 0 `i `uc ]
-[e $U 171  ]
-[; ;main.c: 46: case 2: temp = 1; break;
-"46
-[e :U 174 ]
-[e = _temp -> -> 1 `i `uc ]
-[e $U 171  ]
-[; ;main.c: 47: case 4: temp = 2; break;
-"47
-[e :U 175 ]
-[e = _temp -> -> 2 `i `uc ]
-[e $U 171  ]
-[; ;main.c: 48: case 8: temp = 2; break;
-"48
-[e :U 176 ]
-[e = _temp -> -> 2 `i `uc ]
-[e $U 171  ]
-[; ;main.c: 49: default: break;
-"49
-[e :U 177 ]
-[e $U 171  ]
-"50
-}
-[; ;main.c: 50: }
-[e $U 171  ]
+[e $U 169  ]
+[; ;main.c: 44: case 2: temp = 1; break;
 "44
 [e :U 172 ]
-[e [\ ( _Select4 ..  , $ -> -> 1 `i `uc 173
- , $ -> -> 2 `i `uc 174
- , $ -> -> 4 `i `uc 175
- , $ -> -> 8 `i `uc 176
- 177 ]
-"50
-[e :U 171 ]
-"51
+[e = _temp -> -> 1 `i `uc ]
+[e $U 169  ]
+[; ;main.c: 45: case 4: temp = 2; break;
+"45
+[e :U 173 ]
+[e = _temp -> -> 2 `i `uc ]
+[e $U 169  ]
+[; ;main.c: 46: case 8: temp = 2; break;
+"46
+[e :U 174 ]
+[e = _temp -> -> 2 `i `uc ]
+[e $U 169  ]
+[; ;main.c: 47: default: break;
+"47
+[e :U 175 ]
+[e $U 169  ]
+"48
 }
-[; ;main.c: 51: }
-[e $U 178  ]
-"52
+[; ;main.c: 48: }
+[e $U 169  ]
+"42
 [e :U 170 ]
-[; ;main.c: 52: else{
-{
-[; ;main.c: 53: PORTD = Counter[temp];
-"53
-[e = _PORTD *U + &U _Counter * -> _temp `ux -> -> # *U &U _Counter `ui `ux ]
-"54
+[e [\ ( _Select4 ..  , $ -> -> 1 `i `uc 171
+ , $ -> -> 2 `i `uc 172
+ , $ -> -> 4 `i `uc 173
+ , $ -> -> 8 `i `uc 174
+ 175 ]
+"48
+[e :U 169 ]
+"49
 }
-[e :U 178 ]
-"56
+[; ;main.c: 49: }
+[e $U 176  ]
+"50
+[e :U 168 ]
+[; ;main.c: 50: else{
+{
+[; ;main.c: 51: PORTD = Counter[temp];
+"51
+[e = _PORTD *U + &U _Counter * -> _temp `ux -> -> # *U &U _Counter `ui `ux ]
+"52
+}
+[e :U 176 ]
+"54
 }
 [e :U 165 ]
 "39
 [e $U 166  ]
 [e :U 167 ]
+[; ;main.c: 52: }
 [; ;main.c: 54: }
-[; ;main.c: 56: }
-[; ;main.c: 59: }
-"59
+[; ;main.c: 57: }
+"57
 [e :UE 164 ]
 }
-"61
+"59
 [v _Inter_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 61: void Inter_Init(){
+[; ;main.c: 59: void Inter_Init(){
 [e :U _Inter_Init ]
 [f ]
-[; ;main.c: 62: INTCON = 0b11010000;
-"62
-[e = _INTCON -> -> 208 `i `uc ]
-[; ;main.c: 63: OPTION_REGbits.INTEDG = 1;
-"63
+[; ;main.c: 60: OPTION_REGbits.INTEDG = 1;
+"60
 [e = . . _OPTION_REGbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 64: PIE1 = 0b01000001;
-"64
+[; ;main.c: 61: PIE1 = 0b01000001;
+"61
 [e = _PIE1 -> -> 65 `i `uc ]
-[; ;main.c: 65: TMR1H = 0b11110100;
-"65
+[; ;main.c: 62: TMR1H = 0b11110100;
+"62
 [e = _TMR1H -> -> 244 `i `uc ]
-[; ;main.c: 66: TMR1L = 0b00100100;
-"66
+[; ;main.c: 63: TMR1L = 0b00100100;
+"63
 [e = _TMR1L -> -> 36 `i `uc ]
-[; ;main.c: 67: T1CON = 0b00110001;
-"67
+[; ;main.c: 64: T1CON = 0b00110001;
+"64
 [e = _T1CON -> -> 49 `i `uc ]
-[; ;main.c: 70: }
-"70
-[e :UE 179 ]
+[; ;main.c: 65: INTCON = 0b11010000;
+"65
+[e = _INTCON -> -> 208 `i `uc ]
+[; ;main.c: 67: }
+"67
+[e :UE 177 ]
 }

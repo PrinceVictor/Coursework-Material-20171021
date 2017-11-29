@@ -40,10 +40,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 "4 main.c
 [v _PortBint_Init `(v ~T0 @X0 0 ef ]
-"457 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f887.h
-[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
-"2414
+"2414 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic16f887.h
 [v _IOCB `Vuc ~T0 @X0 0 e@150 ]
+"457
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1752,11 +1752,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _Counters
 -> -> 0 `i `uc
 ]
-[; ;main.c: 6: unsigned char Counters =0;
+[v _data `uc ~T0 @X0 1 e ]
+[; ;main.c: 6: unsigned char Counters =0,data;
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-[v F1668 `(v ~T0 @X0 1 tf ]
+[v F1669 `(v ~T0 @X0 1 tf ]
 "8
-[v _ISR `IF1668 ~T0 @X0 1 e ]
+[v _ISR `IF1669 ~T0 @X0 1 e ]
 {
 [; ;main.c: 8: void interrupt ISR(){
 [e :U _ISR ]
@@ -1765,34 +1766,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 "9
 [e $ ! _RBIF 161  ]
 {
-[; ;main.c: 10: RBIF =0;
+[; ;main.c: 10: data = PORTB;
 "10
-[e = _RBIF -> -> 0 `i `b ]
-[; ;main.c: 11: Counters ++;
+[e = _data _PORTB ]
+[; ;main.c: 11: RBIF =0;
 "11
-[e ++ _Counters -> -> 1 `i `uc ]
-[; ;main.c: 13: while(PORTB == 0);
-"13
-[e $U 162  ]
-[e :U 163 ]
-[e :U 162 ]
-[e $ == -> _PORTB `i -> 0 `i 163  ]
-[e :U 164 ]
-"14
+[e = _RBIF -> -> 0 `i `b ]
+[; ;main.c: 12: Counters = Counters +1;
+"12
+[e = _Counters -> + -> _Counters `i -> 1 `i `uc ]
+"15
 }
 [e :U 161 ]
-[; ;main.c: 14: }
 [; ;main.c: 15: }
-"15
+[; ;main.c: 16: }
+"16
 [e :UE 160 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"16
-[v _main `(i ~T0 @X0 1 ef ]
 "17
+[v _main `(i ~T0 @X0 1 ef ]
+"18
 {
-[; ;main.c: 16: main ()
-[; ;main.c: 17: {
+[; ;main.c: 17: main ()
+[; ;main.c: 18: {
 [e :U _main ]
 [f ]
 [; ;init.c: 4: PORTA=0; PORTB=0; PORTC=0; PORTD=0; PORTE=0;
@@ -1840,40 +1837,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;init.c: 28: _delay((unsigned long)((300)*(4000000/4000.0)));
 "28
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 23: PortBint_Init();
-"23 main.c
+[; ;main.c: 24: PortBint_Init();
+"24 main.c
 [e ( _PortBint_Init ..  ]
-[; ;main.c: 27: while (1) {
-"27
-[e :U 167 ]
-{
-[; ;main.c: 28: PORTD = Counters;
+[; ;main.c: 28: while (1) {
 "28
-[e = _PORTD _Counters ]
+[e :U 164 ]
+{
+[; ;main.c: 29: PORTD = Counters;
 "29
+[e = _PORTD _Counters ]
+"30
 }
-[e :U 166 ]
-"27
-[e $U 167  ]
-[e :U 168 ]
-[; ;main.c: 29: }
-[; ;main.c: 32: }
-"32
-[e :UE 165 ]
+[e :U 163 ]
+"28
+[e $U 164  ]
+[e :U 165 ]
+[; ;main.c: 30: }
+[; ;main.c: 33: }
+"33
+[e :UE 162 ]
 }
-"41
+"42
 [v _PortBint_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 41: void PortBint_Init(){
+[; ;main.c: 42: void PortBint_Init(){
 [e :U _PortBint_Init ]
 [f ]
-[; ;main.c: 42: INTCON = 0b10001000;
-"42
-[e = _INTCON -> -> 136 `i `uc ]
 [; ;main.c: 43: IOCB = 0b00000001;
 "43
 [e = _IOCB -> -> 1 `i `uc ]
-[; ;main.c: 45: }
-"45
-[e :UE 169 ]
+[; ;main.c: 44: INTCON = 0b10001000;
+"44
+[e = _INTCON -> -> 136 `i `uc ]
+[; ;main.c: 46: }
+"46
+[e :UE 166 ]
 }

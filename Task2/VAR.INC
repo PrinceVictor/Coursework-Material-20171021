@@ -9,5 +9,5 @@ Temp	Res	1	; this is used by the examples
 A		Res	1
 Bop		Res	1
 MULT1		Res	1
-MULT2		Res	2
+MULT2		Res	1
 

@@ -3,14 +3,15 @@
 #include "prologue.c"
 void PortBint_Init();
 
-unsigned char Counters =0;
+unsigned char Counters =0,data;
 
 void interrupt ISR(){
-    if(RBIF){   // check portB change flag
-        RBIF =0;  // software clear portB change flag
-        Counters ++;
-    
-        while(PORTB == 0);
+    if(RBIF){   // check portB change flag  
+         data = PORTB; 
+         RBIF =0; // software clear portB change flag
+         Counters = Counters +1; 
+
+
     }
 }
 main ()
@@ -25,7 +26,7 @@ main ()
 
     //***  your code for the superloop
 	while (1) {
-        LEDs = Counters;
+            LEDs = Counters;
 	}
 	
     //*** end of the superloop
@@ -39,7 +40,7 @@ main ()
 //		ctr ^= 0b00100001; // inverts RB5 and RB1 only leaving the other bits unchanged 	
 //}
 void PortBint_Init(){
-    INTCON = 0b10001000;  //bit7 for enable Global Interrupt, bit3 for enable portB change interrupt  
     IOCB   = 0b00000001;  //enable interrupt on change on portB0
+    INTCON = 0b10001000;  //bit7 for enable Global Interrupt, bit3 for enable portB change interrupt  
     
 }

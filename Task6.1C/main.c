@@ -8,7 +8,7 @@ void interrupt ISR(void){
        if(ADIF)
        {
            ADIF = 0; //software clear ADC interrupt flag
-        LEDs = (ADRESH << 2 )+ (ADRESL >> 6);
+        LEDs =  ADRESL ;
         //LEDs = ADRESH << 2;
      //   LEDs = ADRESL >> 6;
         ADCON0bits.GO = 1; // run again
@@ -41,7 +41,7 @@ main ()
 //		ctr ^= 0b00100001; // inverts RB5 and RB1 only leaving the other bits unchanged 	
 //}
 void ADC_Init(){
-    ADCON1 = 0b00000000; //clear bit7 A/D conversion for left justified 
+    ADCON1 = 0b10000000; //clear bit7 A/D conversion for left justified 
     INTCON = 0b11000000; //bit7 enable Global Interrupt, bit6 enable peripheral interrupt
     PIE1   = 0b01000000; //bit6 enable ADC interrupt
     ADCON0 = 0b00111111; //bit5-2 for Fixed Ref, set bit1 for begin ADC working, set bit0 enable ADC

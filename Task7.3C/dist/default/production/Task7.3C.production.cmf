@@ -11,22 +11,22 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 12 12 3 2
+config CONFIG 0 2007 2007 2 2
 $dist/default/production\Task7.3C.production.obj
 cinit CODE 0 15 15 9 2
-text1 CODE 0 B4 B4 7C 2
-text2 CODE 0 15D 15D 19 2
-text3 CODE 0 186 186 7 2
-text4 CODE 0 176 176 10 2
-text5 CODE 0 130 130 2D 2
-maintext CODE 0 1E 1E 96 2
+text1 CODE 0 9C 9C 7C 2
+text2 CODE 0 145 145 19 2
+text3 CODE 0 16E 16E 7 2
+text4 CODE 0 15E 15E 10 2
+text5 CODE 0 118 118 2D 2
+maintext CODE 0 1E 1E 7E 2
 cstackCOMMON COMMON 1 70 70 8 1
 cstackBANK0 BANK0 1 20 20 C 1
 intentry CODE 0 4 4 E 2
 bssBANK0 BANK0 1 2C 2C 3 1
-$C:\Users\Victor\AppData\Local\Temp\s7go.obj
-reset_vec CODE 0 0 0 3 2
-end_init CODE 0 12 12 3 2
-config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -42,13 +42,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 18D-1FFF 2
+CONST 175-1FFF 2
 ENTRY 3-3 2
-ENTRY 18D-1FFF 2
+ENTRY 175-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 18D-1FFF 2
+CODE 175-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -56,9 +56,9 @@ SFR3 180-18F 1
 COMMON 78-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 18D-1FFF 2
+STRCODE 175-1FFF 2
 STRING 3-3 2
-STRING 18D-1FFF 2
+STRING 175-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -73,65 +73,65 @@ STRING 18D-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Task7.3C.production.obj
-15 cinit CODE >266:C:\Users\Victor\AppData\Local\Temp\s7go.
-15 cinit CODE >269:C:\Users\Victor\AppData\Local\Temp\s7go.
-15 cinit CODE >280:C:\Users\Victor\AppData\Local\Temp\s7go.
-16 cinit CODE >281:C:\Users\Victor\AppData\Local\Temp\s7go.
-17 cinit CODE >282:C:\Users\Victor\AppData\Local\Temp\s7go.
-18 cinit CODE >283:C:\Users\Victor\AppData\Local\Temp\s7go.
-19 cinit CODE >284:C:\Users\Victor\AppData\Local\Temp\s7go.
-1A cinit CODE >290:C:\Users\Victor\AppData\Local\Temp\s7go.
-1A cinit CODE >292:C:\Users\Victor\AppData\Local\Temp\s7go.
-1B cinit CODE >293:C:\Users\Victor\AppData\Local\Temp\s7go.
+15 cinit CODE >266:C:\Users\Victor\AppData\Local\Temp\s3t0.
+15 cinit CODE >269:C:\Users\Victor\AppData\Local\Temp\s3t0.
+15 cinit CODE >280:C:\Users\Victor\AppData\Local\Temp\s3t0.
+16 cinit CODE >281:C:\Users\Victor\AppData\Local\Temp\s3t0.
+17 cinit CODE >282:C:\Users\Victor\AppData\Local\Temp\s3t0.
+18 cinit CODE >283:C:\Users\Victor\AppData\Local\Temp\s3t0.
+19 cinit CODE >284:C:\Users\Victor\AppData\Local\Temp\s3t0.
+1A cinit CODE >290:C:\Users\Victor\AppData\Local\Temp\s3t0.
+1A cinit CODE >292:C:\Users\Victor\AppData\Local\Temp\s3t0.
+1B cinit CODE >293:C:\Users\Victor\AppData\Local\Temp\s3t0.
 4 intentry CODE >7:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-130 text5 CODE >7:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-130 text5 CODE >8:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-13F text5 CODE >9:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-140 text5 CODE >10:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-144 text5 CODE >14:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-146 text5 CODE >15:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-147 text5 CODE >16:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-14B text5 CODE >18:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-14D text5 CODE >19:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-14E text5 CODE >20:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-152 text5 CODE >25:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-176 text4 CODE >61:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-176 text4 CODE >62:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-178 text4 CODE >63:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-17B text4 CODE >64:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-17D text4 CODE >65:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-181 text4 CODE >66:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-183 text4 CODE >67:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-185 text4 CODE >70:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-186 text3 CODE >34:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-186 text3 CODE >35:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-189 text3 CODE >36:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-18B text3 CODE >37:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-15D text2 CODE >41:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-15D text2 CODE >43:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-15D text2 CODE >44:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-164 text2 CODE >45:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-16D text2 CODE >46:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-174 text2 CODE >47:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-B4 text1 CODE >50:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-B4 text1 CODE >52:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-BA text1 CODE >53:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-BC text1 CODE >56:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-C6 text1 CODE >57:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-CB text1 CODE >58:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-CC text1 CODE >59:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-CF text1 CODE >60:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-D1 text1 CODE >61:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-D3 text1 CODE >62:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-D7 text1 CODE >63:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-D8 text1 CODE >58:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-E6 text1 CODE >64:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-EB text1 CODE >65:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-F3 text1 CODE >67:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-105 text1 CODE >68:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-118 text1 CODE >69:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-12A text1 CODE >71:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
-12E text1 CODE >72:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+118 text5 CODE >7:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+118 text5 CODE >8:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+127 text5 CODE >9:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+128 text5 CODE >10:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+12C text5 CODE >14:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+12E text5 CODE >15:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+12F text5 CODE >16:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+133 text5 CODE >18:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+135 text5 CODE >19:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+136 text5 CODE >20:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+13A text5 CODE >25:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+15E text4 CODE >59:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+15E text4 CODE >60:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+161 text4 CODE >61:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+163 text4 CODE >62:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+167 text4 CODE >63:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+169 text4 CODE >64:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+16B text4 CODE >65:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+16D text4 CODE >67:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+16E text3 CODE >34:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+16E text3 CODE >35:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+171 text3 CODE >36:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+173 text3 CODE >37:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+145 text2 CODE >41:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+145 text2 CODE >43:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+145 text2 CODE >44:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+14C text2 CODE >45:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+155 text2 CODE >46:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+15C text2 CODE >47:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+9C text1 CODE >50:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+9C text1 CODE >52:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+A2 text1 CODE >53:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+A4 text1 CODE >56:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+AE text1 CODE >57:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+B3 text1 CODE >58:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+B4 text1 CODE >59:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+B7 text1 CODE >60:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+B9 text1 CODE >61:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+BB text1 CODE >62:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+BF text1 CODE >63:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+C0 text1 CODE >58:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+CE text1 CODE >64:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+D3 text1 CODE >65:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+DB text1 CODE >67:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+ED text1 CODE >68:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+100 text1 CODE >69:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+112 text1 CODE >71:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
+116 text1 CODE >72:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\prologue.c
 1E maintext CODE >4:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\init.c
 1E maintext CODE >26:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
 25 maintext CODE >7:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\init.c
@@ -148,19 +148,17 @@ F3 text1 CODE >67:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material
 4F maintext CODE >28:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\init.c
 5E maintext CODE >34:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
 62 maintext CODE >35:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-67 maintext CODE >43:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-68 maintext CODE >45:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-6C maintext CODE >46:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-71 maintext CODE >47:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-71 maintext CODE >48:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-77 maintext CODE >50:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-78 maintext CODE >44:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+67 maintext CODE >41:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+68 maintext CODE >43:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+6C maintext CODE >44:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+71 maintext CODE >45:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+71 maintext CODE >46:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+77 maintext CODE >48:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+78 maintext CODE >42:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
 8A maintext CODE >40:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-92 maintext CODE >41:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-9E maintext CODE >42:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-A9 maintext CODE >43:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-AB maintext CODE >53:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
-B3 maintext CODE >39:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+8F maintext CODE >41:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+93 maintext CODE >51:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
+9B maintext CODE >39:C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task7.3C\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -181,28 +179,28 @@ __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _GO F9 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-main@i 2A 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
+main@i 29 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
 __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _INTF 59 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _PIE1 8C 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\s7go.obj
+___sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\s3t0.obj
 _main 3C 0 CODE 0 maintext dist/default/production\Task7.3C.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-start 24 0 CODE 0 init C:\Users\Victor\AppData\Local\Temp\s7go.obj
-_Select4 168 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
+start 24 0 CODE 0 init C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+_Select4 138 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-__end_of_ReadSw 2EC 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
-_Inter_Init 2EC 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
+__end_of_ReadSw 2BC 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
+_Inter_Init 2BC 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
-intlevel1 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
-intlevel2 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
-intlevel3 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
-intlevel4 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
-intlevel5 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s7go.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\s3t0.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -212,7 +210,7 @@ _ADRESH 1E 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _ANSELH 189 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __size_of_ReadADC 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 Select4@oldLEDs 24 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
-__end_of_Inter_Init 30C 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
+__end_of_Inter_Init 2DC 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __CFG_DEBUG$ON 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _INTCON B 0 ABS 0 - dist/default/production\Task7.3C.production.obj
@@ -220,11 +218,11 @@ _OPTION_REG 81 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 start_initialization 2A 0 CODE 0 cinit dist/default/production\Task7.3C.production.obj
 _Counter 2C 0 BANK0 1 bssBANK0 dist/default/production\Task7.3C.production.obj
-_ReadSw 2BA 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
+_ReadSw 28A 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
 _TMR1IF 60 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-__end_of_ReadADC 31A 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\s7go.obj
+__end_of_ReadADC 2EA 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\s3t0.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -261,7 +259,7 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_ISR 260 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
+_ISR 230 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
 __S0 2009 0 ABS 0 - -
 __S1 78 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
@@ -271,20 +269,20 @@ __CFG_BOR4V$BOR21V 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 saved_w 7E 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __size_of_Select4 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-__end_of_ISR 2BA 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
+__end_of_ISR 28A 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
 __size_of_Inter_Init 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Victor\AppData\Local\Temp\s7go.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Victor\AppData\Local\Temp\s3t0.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __pmaintext 3C 0 CODE 0 maintext dist/default/production\Task7.3C.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-main@temp 29 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
-stackhi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\s7go.obj
-stacklo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\s7go.obj
+main@temp 2B 0 BANK0 1 cstackBANK0 dist/default/production\Task7.3C.production.obj
+stackhi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\s3t0.obj
+stacklo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\s3t0.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
-__end_of_Select4 260 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
+__end_of_Select4 230 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -297,12 +295,12 @@ __Hintentry 24 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-_ReadADC 30C 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
-__ptext1 168 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
-__ptext2 2BA 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
-__ptext3 30C 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
-__ptext4 2EC 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
-__ptext5 260 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
+_ReadADC 2DC 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
+__ptext1 138 0 CODE 0 text1 dist/default/production\Task7.3C.production.obj
+__ptext2 28A 0 CODE 0 text2 dist/default/production\Task7.3C.production.obj
+__ptext3 2DC 0 CODE 0 text3 dist/default/production\Task7.3C.production.obj
+__ptext4 2BC 0 CODE 0 text4 dist/default/production\Task7.3C.production.obj
+__ptext5 230 0 CODE 0 text5 dist/default/production\Task7.3C.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -313,7 +311,7 @@ __Lclrtext 0 0 ABS 0 clrtext -
 __CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Task7.3C.production.obj
 __Hend_init 2A 0 CODE 0 end_init -
-__end_of_main 168 0 CODE 0 maintext dist/default/production\Task7.3C.production.obj
+__end_of_main 138 0 CODE 0 maintext dist/default/production\Task7.3C.production.obj
 _ANSEL 188 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _PORTA 5 0 ABS 0 - dist/default/production\Task7.3C.production.obj
 _PORTB 6 0 ABS 0 - dist/default/production\Task7.3C.production.obj
@@ -363,6 +361,6 @@ __pbssBANK0 2C 0 BANK0 1 bssBANK0 dist/default/production\Task7.3C.production.ob
 %SEGMENTS
 cstackCOMMON 1 70 70 8 1
 cstackBANK0 1 20 20 F 1
-intentry 0 4 8 189 2
+intentry 0 4 8 171 2
 reset_vec 0 0 0 3 2
 config 0 2007 400E 2 2

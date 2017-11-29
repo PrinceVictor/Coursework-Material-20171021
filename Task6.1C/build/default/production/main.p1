@@ -1783,9 +1783,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 10: ADIF = 0;
 "10
 [e = _ADIF -> -> 0 `i `b ]
-[; ;main.c: 11: PORTD = (ADRESH << 2 )+ (ADRESL >> 6);
+[; ;main.c: 11: PORTD = ADRESL ;
 "11
-[e = _PORTD -> + << -> _ADRESH `i -> 2 `i >> -> _ADRESL `i -> 6 `i `uc ]
+[e = _PORTD _ADRESL ]
 [; ;main.c: 14: ADCON0bits.GO = 1;
 "14
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
@@ -1875,9 +1875,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 43: void ADC_Init(){
 [e :U _ADC_Init ]
 [f ]
-[; ;main.c: 44: ADCON1 = 0b00000000;
+[; ;main.c: 44: ADCON1 = 0b10000000;
 "44
-[e = _ADCON1 -> -> 0 `i `uc ]
+[e = _ADCON1 -> -> 128 `i `uc ]
 [; ;main.c: 45: INTCON = 0b11000000;
 "45
 [e = _INTCON -> -> 192 `i `uc ]
