@@ -1,5 +1,5 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Wed Nov 29 00:01:02 2017
+Linker Map File - Created Mon Dec 04 02:04:08 2017
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,10 +7,10 @@ Linker Map File - Created Wed Nov 29 00:01:02 2017
                     V_RES       code   0x000000    program   0x000004
                    .cinit    romdata   0x000002    program   0x000004
                     V_INT       code   0x000004    program   0x000002
-                    .code       code   0x000005    program   0x0001d0
+                    .code       code   0x000005    program   0x00025e
 .config_2007_BUILD/DEFAULT/PRODUCTION/PROGRAM       code   0x002007    program   0x000002
 .config_2008_BUILD/DEFAULT/PRODUCTION/PROGRAM       code   0x002008    program   0x000002
-                      gr1      udata   0x000020       data   0x000010
+                      gr1      udata   0x000020       data   0x000011
                       gr3      udata   0x000070       data   0x000002
 
 
@@ -18,15 +18,17 @@ Linker Map File - Created Wed Nov 29 00:01:02 2017
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0000ec      
+                            0x000000    0x000133      
                             0x002007    0x002008      
-            239 out of 8455 program addresses used, program memory utilization is 2%
+            310 out of 8455 program addresses used, program memory utilization is 3%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
+                     Back   0x00009d    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+               Clear_Flag   0x0000cb    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
                      D_L1   0x00000e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                      D_L2   0x000016    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                      D_L3   0x00001b    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
@@ -36,17 +38,17 @@ Linker Map File - Created Wed Nov 29 00:01:02 2017
                    DelWms   0x000015    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                 Del_100us   0x000005    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                    Del_ms   0x00000c    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
-                  Display   0x000092    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  ExitISR   0x000099    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                      ISR   0x000095    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                LFSR_Init   0x0000e7    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-             LFSR_Shifted   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                    MLoop   0x0000eb    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                     Main   0x00009e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-          ModeSelect_Init   0x0000c3    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  Output0   0x00008f    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  Output1   0x000089    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                 PWM_Init   0x0000cf    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  Display   0x0000dc    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  ExitISR   0x000091    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                      ISR   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                LFSR_Init   0x000125    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             LFSR_Shifted   0x0000cc    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                    MLoop   0x000129    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                     Main   0x0000e2    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+          ModeSelect_Init   0x000107    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             Modle_Select   0x000096    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  Output1   0x0000d6    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                 PWM_Init   0x000113    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
                     RADC1   0x000021    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                   ReadADC   0x000020    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                      Sel0   0x00003f    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
@@ -60,22 +62,27 @@ Linker Map File - Created Wed Nov 29 00:01:02 2017
                   SelMSB1   0x000045    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                   Select4   0x000031    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                   SelectB   0x00005e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
-               Timer_Init   0x0000db    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+         Side_Side_Strobe   0x00009e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                     TIM1   0x00008c    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+            Value_Change1   0x0000bd    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+            Value_Change2   0x0000c4    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             Variable_PWM   0x0000ac    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
                         A   0x000021       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                       Bop   0x000022       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-                   D_Ctr1   0x00002a       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   D_Ctr2   0x00002b       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   D_Ctr3   0x00002c       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                     LFSR   0x000029       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-                    R_Old   0x00002d       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   D_Ctr1   0x00002b       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   D_Ctr2   0x00002c       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   D_Ctr3   0x00002d       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                Direction   0x00002a       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+         Frist_Brightness   0x000027       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                LFSR_data   0x000029       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                    R_Old   0x00002e       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   Runing   0x000025       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
               STATUS_Save   0x000024       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                    ST_TMP   0x000071       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_1.inc
-                    S_Tmp   0x00002e       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   S_Tmp1   0x00002f       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-               Speed_High   0x000025       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-             Speed_Middle   0x000026       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-               Speed_Slow   0x000027       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-          Speed_Very_Slow   0x000028       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                    S_Tmp   0x00002f       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   S_Tmp1   0x000030       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+         Secon_Brightness   0x000028       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                    Speed   0x000026       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                      Temp   0x000020       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                    W_Save   0x000023       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                     W_TMP   0x000070       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_1.inc
@@ -107,34 +114,41 @@ Linker Map File - Created Wed Nov 29 00:01:02 2017
                   SelectB   0x00005e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                    SelBRd   0x000060    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
                     SelL2   0x000065    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_SUB.INC
-             LFSR_Shifted   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  Output1   0x000089    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  Output0   0x00008f    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  Display   0x000092    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                      ISR   0x000095    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                  ExitISR   0x000099    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                     Main   0x00009e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-          ModeSelect_Init   0x0000c3    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                 PWM_Init   0x0000cf    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-               Timer_Init   0x0000db    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                LFSR_Init   0x0000e7    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
-                    MLoop   0x0000eb    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                      ISR   0x000084    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                     TIM1   0x00008c    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  ExitISR   0x000091    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             Modle_Select   0x000096    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                     Back   0x00009d    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+         Side_Side_Strobe   0x00009e    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             Variable_PWM   0x0000ac    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+            Value_Change1   0x0000bd    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+            Value_Change2   0x0000c4    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+               Clear_Flag   0x0000cb    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+             LFSR_Shifted   0x0000cc    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  Output1   0x0000d6    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                  Display   0x0000dc    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                     Main   0x0000e2    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+          ModeSelect_Init   0x000107    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                 PWM_Init   0x000113    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                LFSR_Init   0x000125    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
+                    MLoop   0x000129    program     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\PROGRAM.asm
                      Temp   0x000020       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                         A   0x000021       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                       Bop   0x000022       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
                    W_Save   0x000023       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
               STATUS_Save   0x000024       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-               Speed_High   0x000025       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-             Speed_Middle   0x000026       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-               Speed_Slow   0x000027       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-          Speed_Very_Slow   0x000028       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-                     LFSR   0x000029       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
-                   D_Ctr1   0x00002a       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   D_Ctr2   0x00002b       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   D_Ctr3   0x00002c       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                    R_Old   0x00002d       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                    S_Tmp   0x00002e       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
-                   S_Tmp1   0x00002f       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   Runing   0x000025       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                    Speed   0x000026       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+         Frist_Brightness   0x000027       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+         Secon_Brightness   0x000028       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                LFSR_data   0x000029       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                Direction   0x00002a       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\VAR.inc
+                   D_Ctr1   0x00002b       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   D_Ctr2   0x00002c       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   D_Ctr3   0x00002d       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                    R_Old   0x00002e       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                    S_Tmp   0x00002f       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
+                   S_Tmp1   0x000030       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_VAR.inc
                     W_TMP   0x000070       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_1.inc
                    ST_TMP   0x000071       data     static C:\Users\Victor\Desktop\Embedded_Computing\Coursework Material-20171021\Task8\ECH_1.inc
 

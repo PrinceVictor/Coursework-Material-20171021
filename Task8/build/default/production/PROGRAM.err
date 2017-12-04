@@ -1,4 +1,9 @@
 Message[305] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_SUB.INC 24 : Using default destination of 1 (file).
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 44 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 46 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 90 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 99 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 105 : Register in operand not in bank 0.  Ensure that bank bits are correct.
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 23 : Register in operand not in bank 0.  Ensure that bank bits are correct.
@@ -9,10 +14,9 @@ Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-2017
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 41 : Register in operand not in bank 0.  Ensure that bank bits are correct.
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 43 : Register in operand not in bank 0.  Ensure that bank bits are correct.
 Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\ECH_INIT.INC 46 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 62 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 64 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 66 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 69 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 73 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 92 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[205] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 113 : Found directive in column 1. (end)
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 146 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 148 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 150 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 153 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 163 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[205] C:\USERS\VICTOR\DESKTOP\EMBEDDED_COMPUTING\COURSEWORK MATERIAL-20171021\TASK8\PROGRAM.ASM 212 : Found directive in column 1. (end)
