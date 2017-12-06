@@ -60,10 +60,12 @@ D_L3	movlw	D'100'
 
 
 ; reading the ADC with the delay for conversion
-ReadADC	bsf		ADCON0, GO_DONE		; strat the conversion
+ReadADC	
+	bsf	ADCON0, GO_DONE		; strat the conversion
 RADC1	btfss	ADCON0, GO_DONE		; test the DONE bit
-		goto	RADC1				; if not set, test again
-		movfw	ADRESH				; data ready => copy to W
+		goto	RADC1				; if not set, test again	
+;
+		movfw	ADRESH		; data ready => copy to W
 		return
 
 ; de-bouncing switches using a delay for 20 ms
@@ -88,7 +90,9 @@ DeBounce
 ; rotate the potentiometer to have the right LED on 
 ; then press the button to confirm
 ; LD4 is used to show that potentiometer input is on
-Select4
+Select4		
+
+		banksel	LEDs
 		movfw	LEDs
 		movwf	S_Tmp1		; LEDs -> Tmp1 to restore later
 
@@ -96,7 +100,7 @@ Sel4Rd	clrf	LEDs
 		movfw	S_Tmp1
 		andlw	B'11000000'
 		movwf	LEDs		; restore 3 MSB of LEDs
-		bsf		LEDs,LD4	; indicator on
+		bsf	LEDs,LD4	; indicator on
 
 ;		get the two MSBs of the ADC value
 		call	ReadADC
@@ -110,11 +114,11 @@ Sel4Rd	clrf	LEDs
 		goto	Sel1
 
 Sel0	bsf		LEDs, LD0	; bits were 00
-		movlw	B'00000001'	; choice 0 selected
+		movlw	B'00000000'	; choice 0 selected
 		goto	SelBut
 			
 Sel1	bsf		LEDs, LD1	; bits were 01
-		movlw	B'00000010'	; choice 1 selected
+		movlw	B'00000001'	; choice 1 selected
 		goto	SelBut
 
 SelMSB1						; bit 7 was 1, test bit 6
@@ -122,17 +126,16 @@ SelMSB1						; bit 7 was 1, test bit 6
 		goto	Sel3
 
 Sel2	bsf		LEDs, LD2	; bits were 10
-		movlw	B'00000100'	; choice 2 selected
+		movlw	B'00000010'	; choice 2 selected
 		goto	SelBut
 
 Sel3	bsf		LEDs, LD3	; bits were 11
-		movlw	B'00001000'	; choice 1 selected
+		movlw	B'00000011'	; choice 1 selected
 
 SelBut	movwf	S_Tmp			; W is used in DeBounce
 		call	DeBounce
 		skipPre
 		goto	Sel4Rd		; no confirmation - start again
-
 		clrf	LEDs		; blink the selection
 		movlw	3
 		call	DelWds
@@ -148,7 +151,6 @@ SelBut	movwf	S_Tmp			; W is used in DeBounce
 		movwf	LEDs		; Tmp1 -> LEDs restore before return
 
 		movfw	S_Tmp			; return Sel4 in W
-
 		return
 
 ; selecting 2 bit binary value
@@ -203,6 +205,6 @@ SelL2	call	ReadADC
 		movwf	LEDs		; Tmp1 -> LEDs restore before return
 
 		movfw	S_Tmp			; return Sel4 in W
-
+		
 		return
 		

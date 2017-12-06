@@ -9,8 +9,6 @@ void interrupt ISR(void){
        {
            ADIF = 0; //software clear ADC interrupt flag
         LEDs =  ADRESL ;
-        //LEDs = ADRESH << 2;
-     //   LEDs = ADRESL >> 6;
         ADCON0bits.GO = 1; // run again
 }
 }

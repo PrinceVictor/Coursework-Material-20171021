@@ -1,4 +1,4 @@
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  1
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00025 ; _CP_OFF - program memory protection - DISABLED
                       00026 ; _CPD_OFF - EEPROM protection - DISABLED
                       00027 ; _BOR_OFF - brown out reset - DISABLED
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  2
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00011 
                       00049                 include         ECH_VAR.inc     ; variables required for subroutines
                       00001 ; ECH_VAR.INC - declaration of variables used in the AK subroutines
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  3
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -175,7 +175,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0000                  00021 Del_100us
 0000   301F           00022                 movlw   D'31'
 0001   00??           00023                 movwf   D_Ctr1
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  4
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -234,7 +234,7 @@ Message[305]: Using default destination of 1 (file).
 0020   0806           00073                 movfw   PORTB                   ; copy SwPort to W
 0021   3901           00074                 andlw   B'00000001'             ; mask unused bits (one bit is in use only)
 0022   00??           00075                 movwf   R_Old                   ; save data to a work register
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  5
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  5
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -293,7 +293,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0044   2???           00126                 goto    SelBut
                       00127 
 0045   1588           00128 Sel3    bsf             LEDs, LD3       ; bits were 11
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  6
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  6
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -352,7 +352,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0068   0C??           00179                 rrf             S_Tmp, F
 0069   0C??           00180                 rrf             S_Tmp, F
                       00181 
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  7
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  7
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -391,27 +391,27 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00016 ; Place your SUBROUTINE(S) (if any) here ...  
                       00017 ;{ 
 007F                  00018 ISR     
-007F   00??           00019          movwf     W_Save              ; Save context
-0080   0E03           00020          swapf     STATUS,W
-0081   00??           00021          movwf     STATUS_Save
-                      00022         
-0082   1283 1303      00023          banksel           INTCON
-0084   188B           00024          btfsc     INTCON,INTF  ;check whether external int occured
-0085   1408           00025          bsf       LEDs,LD0
-0086   108B           00026          bcf       INTCON,INTF
-                      00027         
-0087   08??           00028          movf      STATUS_Save,w       ; Restore context
-0088   0083           00029          movwf     STATUS
-0089   0E??           00030          swapf     W_Save,f            ; swapf doesn't affect Status bits, but MOVF would
-008A   0E??           00031          swapf     W_Save,w
+007F   00??           00019         movwf     W_Save              ; Save context
+0080   0E03           00020         swapf     STATUS,W
+0081   00??           00021         movwf     STATUS_Save
+                      00022 
+0082   1283 1303      00023         banksel    INTCON
+0084   188B           00024         btfsc      INTCON,INTF  ;check whether external int occured
+0085   1408           00025         bsf        LEDs,LD0
+0086   108B           00026         bcf        INTCON,INTF
+                      00027 
+0087   08??           00028         movf      STATUS_Save,w       ; Restore context
+0088   0083           00029         movwf     STATUS
+0089   0E??           00030         swapf     W_Save,f            ; swapf doesn't affect Status bits, but MOVF would
+008A   0E??           00031         swapf     W_Save,w
 008B   0009           00032         retfie  ; replace retfie with your ISR if necessary
-                      00033 ;} end of your subroutines
+                      00033 
                       00034 
                       00035 
                       00036 ; Provided code - do not edit  
 008C   0000           00037 Main    nop
                       00038 #include  ECH_INIT.inc
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  8
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  8
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -470,7 +470,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
 00A4   0081           00043         movwf   OPTION_REG       
                       00044 
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE  9
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE  9
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -504,12 +504,12 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00043 ;{ ***          ***************************************************
                       00044 ; e.g.,         movwf   Ctr1 ; etc
                       00045         
-00B3   1683 1303      00046          banksel    OPTION_REG
+00B3   1683 1303      00046         banksel    OPTION_REG
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-00B5   1301           00047          bcf        OPTION_REG,INTEDG  ;clear INTEDG to enable falling edge of INT pin
-00B6   1283 1303      00048          banksel    INTCON
-00B8   3090           00049          movlw      B'10010000'    ; bit7 Enable GLobal Interrupt, bit4 Enable External Interrupt       
-00B9   008B           00050          movwf      INTCON
+00B5   1301           00047         bcf        OPTION_REG,INTEDG  ;clear INTEDG to enable falling edge of INT pin
+00B6   1283 1303      00048         banksel    INTCON
+00B8   3090           00049         movlw      B'10010000'    ; bit7 Enable GLobal Interrupt, bit4 Enable External Interrupt        
+00B9   008B           00050         movwf      INTCON
                       00051 
                       00052 ;} 
                       00053 ; end of your initialisation
@@ -527,7 +527,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                       00065 
 Warning[205]: Found directive in column 1. (end)
 00A4 3EFF             00066 end
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 10
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 10
 
 
 SYMBOL TABLE
@@ -586,7 +586,7 @@ BRG5                              00000005
 BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 11
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 11
 
 
 SYMBOL TABLE
@@ -645,7 +645,7 @@ CCPR2H                            0000001C
 CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 12
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 12
 
 
 SYMBOL TABLE
@@ -704,7 +704,7 @@ GCEN                              00000007
 GIE                               00000007
 GO                                00000001
 GO_DONE                           00000001
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 13
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 13
 
 
 SYMBOL TABLE
@@ -763,7 +763,7 @@ NOT_ADDRESS                       00000005
 NOT_BO                            00000000
 NOT_BOR                           00000000
 NOT_DONE                          00000001
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 14
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 14
 
 
 SYMBOL TABLE
@@ -822,7 +822,7 @@ PSSBD1                            00000001
 PSTRCON                           0000009D
 PULSR                             00000002
 PULSS                             00000003
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 15
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 15
 
 
 SYMBOL TABLE
@@ -881,7 +881,7 @@ RE2                               00000002
 RE3                               00000003
 READ_WRITE                        00000002
 RP0                               00000005
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 16
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 16
 
 
 SYMBOL TABLE
@@ -940,7 +940,7 @@ Sel1                              0000003D
 Sel2                              00000042
 Sel3                              00000045
 Sel4Rd                            0000002E
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 17
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 17
 
 
 SYMBOL TABLE
@@ -999,7 +999,7 @@ TRISA7                            00000007
 TRISB                             00000086
 TRISB0                            00000000
 TRISB1                            00000001
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 18
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 18
 
 
 SYMBOL TABLE
@@ -1058,7 +1058,7 @@ VCFG0                             00000004
 VCFG1                             00000005
 VR0                               00000000
 VR1                               00000001
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 19
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 19
 
 
 SYMBOL TABLE
@@ -1117,7 +1117,7 @@ _DEBUG_ON                         00001FFF
 _DEVID1                           00002006
 _EC_OSC                           00003FFB
 _EXTRC                            00003FFF
-MPASM 5.75                       PROGRAM.ASM   11-28-2017  16:06:09         PAGE 20
+MPASM 5.75                       PROGRAM.ASM   12-5-2017  1:28:17         PAGE 20
 
 
 SYMBOL TABLE

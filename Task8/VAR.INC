@@ -18,16 +18,22 @@ Speed		RES	1
 Frist_Brightness    RES	    1	
 Secon_Brightness    RES	    1
     
-Brightness1	EQU	B'00000100'
-Brightness2	EQU	B'00001000'
-Brightness3	EQU	B'00010000'
-Brightness4	EQU	B'00100000'
+Brightness1	EQU	B'00011100'
+Brightness2	EQU	B'00111000'
+Brightness3	EQU	B'01110000'
+Brightness4	EQU	B'11100000'
 	
-Speed1		EQU	B'00010000'
-Speed2		EQU	B'00100000'
-Speed3		EQU	B'00110000'
-Speed4		EQU	B'11110000'
+Speed1		RES	1
+Speed2		RES	1
+Speed3		RES	1
+Speed4		RES	1
+		
+Direction1	EQU	B'00000001'
+Direction2	EQU	B'00000000'
 		
 LFSR_N		EQU	B'10111000'
 LFSR_data	RES	1
+LEDs_Data	RES	1
 Direction	RES	1
+Mode		RES	1
+Options		RES	1

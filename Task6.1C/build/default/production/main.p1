@@ -1786,24 +1786,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 11: PORTD = ADRESL ;
 "11
 [e = _PORTD _ADRESL ]
-[; ;main.c: 14: ADCON0bits.GO = 1;
-"14
+[; ;main.c: 12: ADCON0bits.GO = 1;
+"12
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"15
+"13
 }
 [e :U 161 ]
-[; ;main.c: 15: }
-[; ;main.c: 16: }
-"16
+[; ;main.c: 13: }
+[; ;main.c: 14: }
+"14
 [e :UE 160 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"17
+"15
 [v _main `(i ~T0 @X0 1 ef ]
-"18
+"16
 {
-[; ;main.c: 17: main ()
-[; ;main.c: 18: {
+[; ;main.c: 15: main ()
+[; ;main.c: 16: {
 [e :U _main ]
 [f ]
 [; ;init.c: 4: PORTA=0; PORTB=0; PORTC=0; PORTD=0; PORTE=0;
@@ -1851,43 +1851,43 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;init.c: 28: _delay((unsigned long)((300)*(4000000/4000.0)));
 "28
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-[; ;main.c: 24: ADC_Init();
-"24 main.c
+[; ;main.c: 22: ADC_Init();
+"22 main.c
 [e ( _ADC_Init ..  ]
-[; ;main.c: 29: while (1) {
-"29
+[; ;main.c: 27: while (1) {
+"27
 [e :U 164 ]
 {
-"31
+"29
 }
 [e :U 163 ]
-"29
+"27
 [e $U 164  ]
 [e :U 165 ]
-[; ;main.c: 31: }
-[; ;main.c: 34: }
-"34
+[; ;main.c: 29: }
+[; ;main.c: 32: }
+"32
 [e :UE 162 ]
 }
-"43
+"41
 [v _ADC_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 43: void ADC_Init(){
+[; ;main.c: 41: void ADC_Init(){
 [e :U _ADC_Init ]
 [f ]
-[; ;main.c: 44: ADCON1 = 0b10000000;
-"44
+[; ;main.c: 42: ADCON1 = 0b10000000;
+"42
 [e = _ADCON1 -> -> 128 `i `uc ]
-[; ;main.c: 45: INTCON = 0b11000000;
-"45
+[; ;main.c: 43: INTCON = 0b11000000;
+"43
 [e = _INTCON -> -> 192 `i `uc ]
-[; ;main.c: 46: PIE1 = 0b01000000;
-"46
+[; ;main.c: 44: PIE1 = 0b01000000;
+"44
 [e = _PIE1 -> -> 64 `i `uc ]
-[; ;main.c: 47: ADCON0 = 0b00111111;
-"47
+[; ;main.c: 45: ADCON0 = 0b00111111;
+"45
 [e = _ADCON0 -> -> 63 `i `uc ]
-[; ;main.c: 49: }
-"49
+[; ;main.c: 47: }
+"47
 [e :UE 166 ]
 }

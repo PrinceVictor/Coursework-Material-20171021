@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.44 build -154322312 
-                                                                                               Mon Nov 27 23:36:56 2017
+                                                                                               Tue Dec 05 01:58:32 2017
 
 Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140600
      1                           	processor	16F887
@@ -199,7 +199,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    185 ;;
    186 ;; *************** function _main *****************
    187 ;; Defined at:
-   188 ;;		line 17 in file "main.c"
+   188 ;;		line 15 in file "main.c"
    189 ;; Parameters:    Size  Location     Type
    190 ;;		None
    191 ;; Auto vars:     Size  Location     Type
@@ -319,10 +319,10 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    305  0051  0BF6               	decfsz	??_main+2,f
    306  0052  284D               	goto	u77
    307                           
-   308                           ;main.c: 24: ADC_Init();
+   308                           ;main.c: 22: ADC_Init();
    309  0053  120A  118A  206E  120A  118A  	fcall	_ADC_Init
    310  0058                     l84:	
-   311                           ;main.c: 29: while (1) {
+   311                           ;main.c: 27: while (1) {
    312                           
    313  0058  2858               	goto	l84
    314  0059                     __end_of_main:	
@@ -331,7 +331,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    317  006E                     __ptext1:	
    318 ;; *************** function _ADC_Init *****************
    319 ;; Defined at:
-   320 ;;		line 43 in file "main.c"
+   320 ;;		line 41 in file "main.c"
    321 ;; Parameters:    Size  Location     Type
    322 ;;		None
    323 ;; Auto vars:     Size  Location     Type
@@ -363,7 +363,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    349                           ;psect for function _ADC_Init
    350  006E                     _ADC_Init:	
    351                           
-   352                           ;main.c: 44: ADCON1 = 0b10000000;
+   352                           ;main.c: 42: ADCON1 = 0b10000000;
    353                           
    354                           ;incstack = 0
    355                           ; Regs used in _ADC_Init: [wreg]
@@ -372,15 +372,15 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    358  0070  1303               	bcf	3,6	;RP1=0, select bank1
    359  0071  009F               	movwf	31	;volatile
    360                           
-   361                           ;main.c: 45: INTCON = 0b11000000;
+   361                           ;main.c: 43: INTCON = 0b11000000;
    362  0072  30C0               	movlw	192
    363  0073  008B               	movwf	11	;volatile
    364                           
-   365                           ;main.c: 46: PIE1 = 0b01000000;
+   365                           ;main.c: 44: PIE1 = 0b01000000;
    366  0074  3040               	movlw	64
    367  0075  008C               	movwf	12	;volatile
    368                           
-   369                           ;main.c: 47: ADCON0 = 0b00111111;
+   369                           ;main.c: 45: ADCON0 = 0b00111111;
    370  0076  303F               	movlw	63
    371  0077  1283               	bcf	3,5	;RP0=0, select bank0
    372  0078  1303               	bcf	3,6	;RP1=0, select bank0
@@ -439,7 +439,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    425  0060  1303               	bcf	3,6	;RP1=0, select bank0
    426  0061  0088               	movwf	8	;volatile
    427                           
-   428                           ;main.c: 14: ADCON0bits.GO = 1;
+   428                           ;main.c: 12: ADCON0bits.GO = 1;
    429  0062  149F               	bsf	31,1	;volatile
    430  0063                     i1l79:	
    431  0063  0873               	movf	??_ISR+3,w
@@ -595,7 +595,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.44 build -154322312 
-Symbol Table                                                                                   Mon Nov 27 23:36:56 2017
+Symbol Table                                                                                   Tue Dec 05 01:58:32 2017
 
                       l84 0058                        u67 003E                        u77 004D  
                      _ISR 0059                       fsr0 0004              __CFG_LVP$OFF 0000  

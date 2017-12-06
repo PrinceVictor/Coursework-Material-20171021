@@ -2187,8 +2187,6 @@ if(ADIF)
 {
 ADIF = 0;
 PORTD = ADRESL ;
-
-
 ADCON0bits.GO = 1;
 }
 }
@@ -2222,7 +2220,7 @@ _delay((unsigned long)((300)*(4000000/4000.0)));
 PORTD = 0;
 _delay((unsigned long)((300)*(4000000/4000.0)));
 
-# 24 "main.c"
+# 22 "main.c"
 ADC_Init();
 
 
@@ -2235,7 +2233,7 @@ while (1) {
 
 }
 
-# 43
+# 41
 void ADC_Init(){
 ADCON1 = 0b10000000;
 INTCON = 0b11000000;
